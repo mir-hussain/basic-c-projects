@@ -1,19 +1,36 @@
 #include <stdio.h>
 
-void arraySorter(int arr[10]);
+void arraySorter(int arr[], int size);
 
 int main()
 {
-    int numbers[10] = {4, 7, 8, 9, 14, 5, 13, 14, 15, 6};
+    int n;
 
-    arraySorter(numbers);
+    printf("Enter the length of array: ");
+    scanf("%d", &n);
+
+    int numbers[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter  a number: ");
+        scanf("%d", &numbers[i]);
+    }
+
+    for (int j = 0; j < n; j++)
+    {
+        printf("%d ", numbers[j]);
+    }
+    printf("\n");
+
+    arraySorter(numbers, n);
 }
 
-void arraySorter(int arr[10])
+void arraySorter(int arr[], int size)
 {
-    int odds[10], evens[10], odd_count = 0, even_count = 0;
+    int odds[size], evens[size], odd_count = 0, even_count = 0;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < size; i++)
     {
 
         if (arr[i] % 2 == 0)
