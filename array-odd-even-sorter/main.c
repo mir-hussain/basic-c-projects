@@ -17,12 +17,6 @@ int main()
         scanf("%d", &numbers[i]);
     }
 
-    for (int j = 0; j < n; j++)
-    {
-        printf("%d ", numbers[j]);
-    }
-    printf("\n");
-
     arraySorter(numbers, n);
 }
 
